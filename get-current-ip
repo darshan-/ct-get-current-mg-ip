@@ -2,7 +2,4 @@
 
 secret=`cat secret`
 
-# I don't want to have to remember not to have a newline in `secret'
-secret=`echo $secret`
-
 curl -s --user "api:$secret" -G https://api.mailgun.net/v3/ips-G https://api.mailgun.net/v3/ips
